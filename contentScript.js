@@ -6,6 +6,16 @@ function displayExchangeRate(rate) {
 // Background script se exchange rate data ko receive karein
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     if (message.exchangeRate) {
-        displayExchangeRate(message.exchangeRate);
+      document.getElementById("exchangeRate").textContent = message.exchangeRate;
     }
+  });
+  
+// contentScript.js
+document.addEventListener("DOMContentLoaded", function () {
+    const currencyInput = document.getElementById("currencyInput"); // Replace with your input element ID
+    
+    currencyInput.addEventListener("input", function () {
+        const enteredCurrency = currencyInput.value;
+        displayExchangeRate(exchangeRate, enteredCurrency);
+    });
 });

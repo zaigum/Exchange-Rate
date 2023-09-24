@@ -1,21 +1,33 @@
-const apiKey = 'de904f3177731b45b3f2cf27 '; // Replace with your actual API key
-const targetCurrency = 'EUR'; // Replace 'EUR' with the currency code you want to display
 
-async function fetchExchangeRate() {
-    try {
-      const apiUrl = `https://v6.exchangeratesapi.io/latest?base=USD`;
-      const response = await fetch(apiUrl);
-  
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-  
-      const data = await response.json();
-      const exchangeRate = data.rates[targetCurrency];
-      // Store the exchange rate data in local storage or pass it to content or popup script
-      chrome.storage.local.set({ exchangeRate: exchangeRate });
-    } catch (error) {
-      console.error(error);
-    }
+ const apiKey = '7398a178edabcc7e8b9411e2';
+ 
+chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
+  if (message.getExchangeRate) {
+    const targetCurrency = message.targetCurrency || 'PKR , pkr' ;  
+    fetchExchangeRate(targetCurrency);
   }
-  
+});
+
+async function fetchExchangeRate(targetCurrency) {
+  try {
+    const apiUrl = 'https://api.exchangerate-api.com/v4/latest/USD';
+    const response = await fetch(apiUrl);
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    const data = await response.json();
+    const exchangeRate = data.rates[targetCurrency];
+
+     chrome.runtime.sendMessage({ exchangeRate });
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+
+// Call the fetchExchangeRate function when the extension is loaded
+fetchExchangeRate();
+
+ 

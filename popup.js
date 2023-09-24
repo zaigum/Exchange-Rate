@@ -1,3 +1,5 @@
+
+
 // Listen for the exchange rate message from the background script
 // popup.js
 chrome.runtime.sendMessage({ getExchangeRate: true });
@@ -22,3 +24,22 @@ function displayExchangeRate(rate) {
     // DOM manipulation code here
     document.getElementById("exchangeRate").textContent = rate;
 }
+// Send a message to the background script to get the exchange rate
+chrome.runtime.sendMessage({ getExchangeRate: true });
+
+
+
+
+
+
+// popup.js
+
+document.addEventListener("DOMContentLoaded", function () {
+  const fetchButton = document.getElementById("fetchExchangeRateButton");
+  const targetCurrencyInput = document.getElementById("targetCurrencyInput");
+
+  fetchButton.addEventListener("click", function () {
+    const targetCurrency = targetCurrencyInput.value;
+    chrome.runtime.sendMessage({ getExchangeRate: true, targetCurrency });
+  });
+});

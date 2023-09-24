@@ -1,6 +1,43 @@
 /* popup.css */
+
 body {
-    width: 200px;
-    height: 100px;
-  }
-  
+  width: 250px; /* Adjust the width as needed */
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #1e293b;
+  color: #fff;
+
+}
+
+h1 {
+  font-size: 18px;
+}
+
+input[type="text"] {
+  width: 93%;
+  padding: 10px;
+  margin-top: 10px;
+ }
+
+button {
+  margin-top: 2rem;
+  padding: 10px 20px;
+  background-color: #0eb9fd; /* Blue color, you can change it */
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Scale up slightly on hover */
+}
+
+#exchangeRate {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
