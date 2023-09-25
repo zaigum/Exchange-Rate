@@ -1,9 +1,8 @@
 
- const apiKey = '7398a178edabcc7e8b9411e2';
  
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
   if (message.getExchangeRate) {
-    const targetCurrency = message.targetCurrency || 'PKR , pkr' ;  
+    const targetCurrency = message.targetCurrency || 'PKR  ' ;  
     fetchExchangeRate(targetCurrency);
   }
 });
