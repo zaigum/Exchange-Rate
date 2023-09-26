@@ -1,27 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Exchange Rate Extension</title>
-  <!-- stylesheet -->
-  <link rel="stylesheet" type="text/css" href="popup.css">
-  <!-- Font-Link -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exchange Rate Checker</title>
+  <link rel="stylesheet" href="popup.css">
+    <!-- Font-Links -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
-
-
-  <h1>Exchange Rate:</h1>
-  <div id="exchangeRate"></div>
-  <input type="text" id="targetCurrencyInput" placeholder="Enter Target Currency">
-  <button id="fetchExchangeRateButton">Get Exchange Rate</button>
-
-
-
+  <header>
+    <h1>Exchange Rate Checker</h1>
+  </header>
+  <main>
+    <div class="exchange-rate-container">
+      <label for="targetCurrencyInput">Enter Target Currency:</label>
+      <input type="text" id="targetCurrencyInput" placeholder="Currency Code">
+      <button id="fetchExchangeRateButton">Get Exchange Rate</button>
+      <p id="countryNameDisplay">Country: </p>
+    </div>
+    <div class="exchange-rate-result">
+      <h2>Exchange Rate:</h2>
+      <p id="exchangeRate"></p>
+    </div>
+  </main>
   <script src="popup.js"></script>
 </body>
 
