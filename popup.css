@@ -1,102 +1,126 @@
-/* popup.css - Improved Design */
+/* popup.css - Final Refined Design */
 
+/* Global and Body Styling */
 body {
-  margin: 0;
-  padding: 0;
-  width: 300px;
-  font-family: 'Poppins', sans-serif;
-  background-color: #eef2f6;
-  color: #334155;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #eef2f6; /* Soft, light background */
+    color: #334155; /* Dark gray for text for better readability */
+    line-height: 1.6;
 }
 
+/* Header Styling */
 header {
-  background-color: #1a237e;
-  color: #ffffff;
-  text-align: center;
-  padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #1a237e; /* Deep blue, professional feel */
+    color: #ffffff;
+    text-align: center;
+    padding: 1.25rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Main Container */
 main {
-  max-width: 400px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e2e8f0;
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
 }
 
+/* Form and Input Styling */
 .exchange-rate-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; /* Better spacing between elements */
 }
 
 label {
-  margin-bottom: 8px;
-  font-weight: 600;
-  color: #475569;
-  text-align: left;
-  width: 100%;
+    font-weight: 600;
+    color: #475569;
+    text-align: left;
+    width: 100%;
+    margin-bottom: -0.5rem; /* Adjusting for a tighter layout */
 }
 
 #targetCurrencyInput {
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  width: 100%;
-  box-sizing: border-box;
-  transition: border-color 0.3s ease;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#targetCurrencyInput::placeholder {
+    color: #94a3b8;
 }
 
 #targetCurrencyInput:focus {
-  border-color: #4f46e5;
-  outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+    outline: none;
 }
 
+/* Button Styling */
 #fetchExchangeRateButton {
-  margin-top: 1.5rem;
-  padding: 12px 24px;
-  background-color: #4f46e5;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  width: 100%;
+    padding: 12px 24px;
+    background-color: #4f46e5;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%;
 }
 
 #fetchExchangeRateButton:hover {
-  background-color: #4338ca;
-  transform: scale(1.02);
+    background-color: #4338ca;
+    transform: translateY(-2px); /* Lift button on hover */
+    box-shadow: 0 4px 8px rgba(79, 70, 229, 0.2);
 }
 
+/* Result Display Section */
 .exchange-rate-result {
-  margin-top: 25px;
-  padding: 20px;
-  background-color: #f8fafc;
-  border-radius: 8px;
-  text-align: center;
+    margin-top: 2rem;
+    padding: 20px;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px dashed #cbd5e1;
 }
 
-h2 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  color: #1e293b;
+.exchange-rate-result h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
 }
 
 #exchangeRate {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #4f46e5;
+    font-size: 2.25rem; /* Even larger for impact */
+    font-weight: 700;
+    color: #4f46e5;
+    letter-spacing: 0.5px;
+    margin: 0;
 }
 
 #countryNameDisplay {
-  font-weight: 600;
-  margin-top: 10px;
-  color: #475569;
+    font-weight: 600;
+    margin-top: 1rem;
+    color: #475569;
+    font-size: 0.9rem;
 }
