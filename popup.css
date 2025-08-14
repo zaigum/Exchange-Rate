@@ -1,19 +1,17 @@
 /* popup.css - Final Refined Design */
 
-/* Global and Body Styling */
 body {
     margin: 0;
     padding: 0;
     width: 300px;
     font-family: 'Poppins', sans-serif;
-    background-color: #eef2f6; /* Soft, light background */
-    color: #334155; /* Dark gray for text for better readability */
+    background-color: #eef2f6;
+    color: #334155;
     line-height: 1.6;
 }
 
-/* Header Styling */
 header {
-    background-color: #1a237e; /* Deep blue, professional feel */
+    background-color: #1a237e;
     color: #ffffff;
     text-align: center;
     padding: 1.25rem 0;
@@ -26,7 +24,6 @@ header h1 {
     font-weight: 700;
 }
 
-/* Main Container */
 main {
     max-width: 400px;
     margin: 2rem auto;
@@ -37,12 +34,11 @@ main {
     border: 1px solid #e2e8f0;
 }
 
-/* Form and Input Styling */
 .exchange-rate-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem; /* Better spacing between elements */
+    gap: 1rem;
 }
 
 label {
@@ -50,7 +46,7 @@ label {
     color: #475569;
     text-align: left;
     width: 100%;
-    margin-bottom: -0.5rem; /* Adjusting for a tighter layout */
+    margin-bottom: -0.5rem;
 }
 
 #targetCurrencyInput {
@@ -73,7 +69,6 @@ label {
     outline: none;
 }
 
-/* Button Styling */
 #fetchExchangeRateButton {
     padding: 12px 24px;
     background-color: #4f46e5;
@@ -90,11 +85,10 @@ label {
 
 #fetchExchangeRateButton:hover {
     background-color: #4338ca;
-    transform: translateY(-2px); /* Lift button on hover */
+    transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(79, 70, 229, 0.2);
 }
 
-/* Result Display Section */
 .exchange-rate-result {
     margin-top: 2rem;
     padding: 20px;
@@ -111,7 +105,7 @@ label {
 }
 
 #exchangeRate {
-    font-size: 2.25rem; /* Even larger for impact */
+    font-size: 2.25rem;
     font-weight: 700;
     color: #4f46e5;
     letter-spacing: 0.5px;
