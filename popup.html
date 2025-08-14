@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exchange Rate Checker</title>
-  <link rel="stylesheet" href="popup.css">
-    <!-- Font-Links -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange Rate Checker</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <header>
-    <h1>Exchange Rate Checker</h1>
-  </header>
-  <main>
-    <div class="exchange-rate-container">
-      <label for="targetCurrencyInput">Enter Target Currency:</label>
-      <input type="text" id="targetCurrencyInput" placeholder="Currency Code">
-      <button id="fetchExchangeRateButton">Get Exchange Rate</button>
-      <p id="countryNameDisplay">Country: </p>
-    </div>
-    <div class="exchange-rate-result">
-      <h2>Exchange Rate:</h2>
-      <p id="exchangeRate"></p>
-    </div>
-  </main>
-  <script src="popup.js"></script>
+    <header>
+        <h1>Exchange Rate Checker</h1>
+    </header>
+    <main>
+        <div class="exchange-rate-container">
+            <label for="targetCurrencyInput">Enter Target Currency Code:</label>
+            <input type="text" id="targetCurrencyInput" placeholder="e.g., USD, EUR, JPY">
+            <button id="fetchExchangeRateButton">Get Exchange Rate</button>
+            <p id="countryNameDisplay">Country: <span id="countryName">N/A</span></p>
+        </div>
+        <div class="exchange-rate-result">
+            <h2>Exchange Rate:</h2>
+            <p id="exchangeRate">Please enter a currency.</p>
+        </div>
+    </main>
+    <script src="popup.js"></script>
 </body>
-
 </html>
