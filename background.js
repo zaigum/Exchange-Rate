@@ -24,9 +24,7 @@ async function fetchExchangeRate(targetCurrency) {
     console.error(error);
   }
 }
-
-
-// Call the fetchExchangeRate function when the extension is loaded
+ 
 fetchExchangeRate();
 
  
