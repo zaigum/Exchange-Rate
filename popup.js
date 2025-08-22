@@ -1,4 +1,4 @@
-// popup.js
+
 document.addEventListener("DOMContentLoaded", function () {
   const fetchButton = document.getElementById("fetchExchangeRateButton");
   const targetCurrencyInput = document.getElementById("targetCurrencyInput");
